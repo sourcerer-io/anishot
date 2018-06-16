@@ -62,10 +62,10 @@ def make_scroll(image, frames):
     h, w = image.shape[:2]
 
     stops = [0] + list(map(int, F.stops)) + [h - F.h]
-    y_pos = []
     add_frame(frames, image[stops[0]:stops[0] + F.h, :], 2)
     for i in range(len(stops) - 1):
         s0, s1 = stops[i:i + 2]
+
         speed = 10
         y = s0 + speed
         while y < s1:
@@ -93,6 +93,7 @@ def main(argv):
         print('e: ', e)
         print('Usage: %s' % F)
         return 1
+
 
 if __name__ == '__main__':
     sys.exit(main(sys.argv))
