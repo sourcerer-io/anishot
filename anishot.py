@@ -54,7 +54,10 @@ def make_zoomin(image, frames):
         scale += step
         small_w = small.size[0]
         frame = Image.new('RGB', (w, F.h), '#ffffff')
-        frame.paste(small, ((w - small_w) // 2, 0))
+        off = (w - small_w) // 2
+        frame.paste(small, (off, 0))
+        draw = Draw(frame)
+        draw.rectangle([off, 0, off + small_w, F.h], outline='#666666')
         add_frame(frames, numpy.array(frame), .2 if i > 0 else 1)
 
 
