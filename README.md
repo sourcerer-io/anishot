@@ -1,6 +1,8 @@
 # anishot
 Animates a long screenshot into a GIF. Use it to show off long screenshots in your GitHub README.
 
+![](https://user-images.githubusercontent.com/35666548/41495994-7669ccc8-70e9-11e8-80d4-3253cd0fa963.gif)
+
 ```Usage:
   --h: Window height
     (default: '0')
