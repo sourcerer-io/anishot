@@ -6,7 +6,7 @@ __author__ = 'Sergey Surkov'
 import os
 import sys
 
-import gflags
+from absl import flags as gflags
 import imageio
 import numpy
 
@@ -78,7 +78,8 @@ def make_scroll(image, frames):
         add_frame(frames, image[s1:s1 + F.h, :], 2)
 
 
-def main(argv):
+def main():
+    argv = sys.argv
     try:
         F(argv)
 
@@ -92,11 +93,15 @@ def main(argv):
         imageio.mimwrite(F.out,
                          map(lambda f: f[0], frames),
                          duration=list(map(lambda f: f[1], frames)))
-    except gflags.FlagsError as e:
+    except TypeError as e:
+        print('e: ', e)
+        print('Usage: %s' % F)
+        return 1
+    except gflags.Error as e:
         print('e: ', e)
         print('Usage: %s' % F)
         return 1
 
 
 if __name__ == '__main__':
-    sys.exit(main(sys.argv))
+    sys.exit(main())

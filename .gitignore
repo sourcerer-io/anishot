@@ -1,0 +1,11 @@
+anishot.egg-info/
+build/
+*.eggs/
+*__pycache__*
+build/
+.tox/
+*.pyc
+dist/
+*.swa
+*.swp
+*~
