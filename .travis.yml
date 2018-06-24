@@ -1,0 +1,25 @@
+language: python
+cache:
+  - pip
+python:
+  - '2.7'
+  - '3.4'
+  - '3.5'
+  - 3.5-dev
+  - '3.6'
+  - 3.6-dev
+before_install:
+  - pip install -U pip
+  - pip install -U setuptools
+  - pip install -U wheel
+  - pip install -U pbr
+script:
+  - python setup.py install
+
+deploy:
+  - provider: pypi
+    user: sourcerer-io
+    password: your-pypi-password
+    on:
+      tags: true
+    distributions: sdist bdist_wheel
