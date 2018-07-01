@@ -21,8 +21,7 @@ gflags.DEFINE_integer('pad', 0, 'Padding on sides')
 gflags.DEFINE_integer('maxspeed', 200, 'Max speed on scroll px/frame')
 gflags.DEFINE_list('stops', [], 'List of stops for scrolling')
 gflags.DEFINE_integer('zoom_steps', 7, 'Number of steps on initial zoom in')
-gflags.DEFINE_float('start_scale', .5,
-                    'Fraction of screenshot to see on zoomout')
+gflags.DEFINE_float('start_scale', .5, 'Start scale')
 gflags.DEFINE_integer('zoom_to', 0, 'Point to zoom to')
 
 gflags.DEFINE_integer('shadow_size', 0, 'Shadow size')
