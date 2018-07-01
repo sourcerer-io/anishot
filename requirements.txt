@@ -1,3 +1,2 @@
-absl-py
 imageio
 Pillow
