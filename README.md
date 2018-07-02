@@ -1,4 +1,9 @@
 # anishot
+![PyPI](https://img.shields.io/pypi/v/anishot.svg)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/anishot.svg)
+![PyPI - License](https://img.shields.io/pypi/l/anishot.svg)
+![PyPI - Wheel](https://img.shields.io/pypi/wheel/anishot.svg)
+
 Animates a long screenshot into a GIF. Use it to show off long screenshots in your GitHub README.
 
 ![clean look](https://user-images.githubusercontent.com/20287615/42131345-5e13bb52-7cb5-11e8-93d3-d448684dc1c5.gif)
