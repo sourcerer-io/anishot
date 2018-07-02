@@ -1,4 +1,5 @@
 # anishot
+[![Build Status](https://travis-ci.com/sourcerer-io/anishot.svg?branch=master)](https://travis-ci.com/sourcerer-io/anishot)
 ![PyPI](https://img.shields.io/pypi/v/anishot.svg)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/anishot.svg)
 ![PyPI - License](https://img.shields.io/pypi/l/anishot.svg)

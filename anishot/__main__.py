@@ -76,7 +76,8 @@ def make_zoomin(image, frames):
         frame = make_blank_frame(w)
 
         progress = (F.zoom_steps - i - 1) / (F.zoom_steps - 1)
-        y = -int((progress * start_y + (1 - progress) * F.zoom_to) * scale + .5)
+        y = -int(
+            (progress * start_y + (1 - progress) * F.zoom_to) * scale + .5)
         render_frame(scaled, y, frame)
         add_frame(frame, .1 if i > 0 else 1.5, frames)
 
