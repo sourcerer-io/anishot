@@ -12,7 +12,10 @@ before_install:
   - pip install -U setuptools
   - pip install -U wheel
   - pip install -U pbr
+install:
+  - pip install tox-travis .[devel]
 script:
+  - bandit -r anishot
   - python setup.py install
 deploy:
   - provider: pypi
