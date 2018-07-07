@@ -4,7 +4,14 @@ Animates a long screenshot into a GIF. Use it to show off long screenshots in yo
 ![clean look](https://user-images.githubusercontent.com/20287615/42131345-5e13bb52-7cb5-11e8-93d3-d448684dc1c5.gif)
 
 ## Install
+anishot is not currently available on PyPI, so use these commands to install after cloning:
+```
+$ pip install pbr
+$ python setup.py build
+$ python setup.py install
+```
 
+When anishot is available use this command to install:
 ```
 $ pip install anishot
 ```
