@@ -11,7 +11,7 @@ $ python setup.py build
 $ python setup.py install
 ```
 
-When anishot is available use this command to install:
+When anishot is available on PyPI (about 1 week) use this command to install:
 ```
 $ pip install anishot
 ```
