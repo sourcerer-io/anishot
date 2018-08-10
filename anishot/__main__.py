@@ -16,7 +16,7 @@ from PIL.ImageDraw import Draw
 ARGS = None
 
 
-def argparser():
+def parse_arguments():
     parser = argparse.ArgumentParser(
         description='Animates a long screenshot into a GIF')
     parser.add_argument('input', type=argparse.FileType(),
@@ -25,15 +25,15 @@ def argparser():
                         help='Output animated GIF')
     parser.add_argument('height', type=int,
                         help='Window height')
-    parser.add_argument('-p', '--pad', default=0, type=int,
+    parser.add_argument('--pad', default=0, type=int,
                         help='Padding on sides')
-    parser.add_argument('-m', '--maxspeed', default=200, type=int,
+    parser.add_argument('--maxspeed', default=200, type=int,
                         help='Max speed on scroll px/frame')
     parser.add_argument('-s', '--stops', nargs='*', default=[],
                         help='Max speed on scroll px/frame')
     parser.add_argument('--zoom-steps', default=7, type=int,
                         help='Number of steps on initial zoom in')
-    parser.add_argument('--start-scale', default=5, type=int,
+    parser.add_argument('--start-scale', default=.7, type=float,
                         help='Start scale')
     parser.add_argument('--zoom-to', default=0, type=int,
                         help='Point to zoom to')
@@ -49,6 +49,11 @@ def argparser():
                         help='Window outline color')
     global ARGS
     ARGS = parser.parse_args()
+
+
+def check_arguments():
+    if ARGS.output[-4:] != '.gif':
+        raise ValueError('Output must be a GIF file')
 
 
 def make_blank_frame(width):
@@ -127,7 +132,7 @@ def make_scroll(image, frames):
         add_scroll_frame(image, s1, 2, frames)
 
 
-def process():
+def make_anishot():
     image = Image.fromarray(imageio.imread(ARGS.input.name))
     frames = []
 
@@ -140,25 +145,18 @@ def process():
                      duration=list(map(lambda f: f[1], frames)))
 
 
-def check():
-    if ARGS.output[-4:] != '.gif':
-        raise ValueError("output must be a gif file")
-
-
-def finish():
-    msg = "Done! Generated file will be available at {}".format(ARGS.output)
-    print(msg)
-
-
 def main():
     try:
-        argparser()
-        check()
-        process()
-        finish()
-    except ValueError:
-        print("Invalid output filename")
+        parse_arguments()
+        check_arguments()
+        make_anishot()
+        print('i Done, saved to %s' % ARGS.output)
+
+    except ValueError as e:
+        print('e %s' % str(e))
         return 127
+
+    return 0
 
 
 if __name__ == '__main__':
