@@ -29,8 +29,8 @@ def parse_arguments():
                         help='Padding on sides')
     parser.add_argument('--maxspeed', default=200, type=int,
                         help='Max speed on scroll px/frame')
-    parser.add_argument('-s', '--stops', nargs='*', default=[],
-                        help='Max speed on scroll px/frame')
+    parser.add_argument('--stops', nargs='*', default=[],
+                        help='Stops between scrolls, px')
     parser.add_argument('--zoom-steps', default=7, type=int,
                         help='Number of steps on initial zoom in')
     parser.add_argument('--start-scale', default=.7, type=float,
