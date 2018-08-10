@@ -63,3 +63,15 @@ You can also experiment with styles. For example, you can go for a retro look:
 ``anishot --inp=anishot.png --out=anishot.gif --h=450 --stops=290,640,940 --zoom_to=150 --start_scale=.7 --pad=50 --shadow_size=5 --rgb_bg=#cccccc --rgb_window=#666666`` 
 
 ![retro look](https://user-images.githubusercontent.com/20287615/42131349-64488250-7cb5-11e8-863f-b3156e709ddc.gif)
+
+## Contributing
+Contributions are welcome!
+
+[![](https://sourcerer.io/fame/sergey48k/sourcerer-io/anishot/images/0)](https://sourcerer.io/fame/sergey48k/sourcerer-io/anishot/links/0)
+[![](https://sourcerer.io/fame/sergey48k/sourcerer-io/anishot/images/1)](https://sourcerer.io/fame/sergey48k/sourcerer-io/anishot/links/1)
+[![](https://sourcerer.io/fame/sergey48k/sourcerer-io/anishot/images/2)](https://sourcerer.io/fame/sergey48k/sourcerer-io/anishot/links/2)
+[![](https://sourcerer.io/fame/sergey48k/sourcerer-io/anishot/images/3)](https://sourcerer.io/fame/sergey48k/sourcerer-io/anishot/links/3)
+[![](https://sourcerer.io/fame/sergey48k/sourcerer-io/anishot/images/4)](https://sourcerer.io/fame/sergey48k/sourcerer-io/anishot/links/4)
+[![](https://sourcerer.io/fame/sergey48k/sourcerer-io/anishot/images/5)](https://sourcerer.io/fame/sergey48k/sourcerer-io/anishot/links/5)
+[![](https://sourcerer.io/fame/sergey48k/sourcerer-io/anishot/images/6)](https://sourcerer.io/fame/sergey48k/sourcerer-io/anishot/links/6)
+[![](https://sourcerer.io/fame/sergey48k/sourcerer-io/anishot/images/7)](https://sourcerer.io/fame/sergey48k/sourcerer-io/anishot/links/7)
