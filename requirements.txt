@@ -1,2 +1,2 @@
-imageio
-Pillow
+imageio==2.3.0
+Pillow==5.2.0

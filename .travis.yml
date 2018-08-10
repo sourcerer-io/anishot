@@ -2,7 +2,6 @@ language: python
 cache:
   - pip
 python:
-  - '2.7'
   - '3.4'
   - '3.5'
   - 3.5-dev
@@ -13,13 +12,16 @@ before_install:
   - pip install -U setuptools
   - pip install -U wheel
   - pip install -U pbr
+install:
+  - pip install tox-travis .[devel]
 script:
+  - bandit -r anishot
   - python setup.py install
-
 deploy:
   - provider: pypi
     user: sourcerer-io
-    password: your-pypi-password
+    password:
+      secure: SXa48pnDFeDLvGs0A4V5aEX8s6DkHox/T8AqJGBviEbFaAcMMpFLzPvH/dqQjXz529EM9WBxk1znyrch7KuB80SneCEKUgPstrBD9g47jMr4wDpFW6GRcByqmA82BOWUL1QK2SLsMIcfyHa7rBZ8Vr84KMddKLpGK2hGYvH2bZzN54rjhbQpJeeDYVlr5PO3krO1qNgHT8C8syAM9IY8vir6ZZe6MhqIydsizdqdAOdW4QaTgkGmEPdke7uxfgVVNpLdSX7INSVjLMH2kpAt0GXSfrl0MJRugGNiqLxcC9CejB/aC15ZlRSX1glZ8W/U9Nzw1dQgQx6MZQc0rnRk1WivNTuT6DKs71ZHTYYw0fAgfjf0KWZgLu8HRGiRwoBtGo+M452kvZGl/8h1n75ORydmInKnJlupkOfuumQEgabhHpt8l53ehzvZmqRbZx1HO3nKt6fVt1TqC26LxaLEoSW8mnW4AM2/IB9Gy9gscEUKMqbs8vf8fdVa9d7RJbTKz3hOl8vxG7z91vPPTFZzXZggMVkkyYRi0SpqrIlQmveXQoiuS674w2hZo7MfY69a35uHxYENPdP7MIMDLb0HBzdVOPWHoqWaJ0KHzgHiMS+tqogzN6zB9HpRqaT93wApL2BoZ8A0UrRKjfItR7s878y8/LfV/uXEn3JDUFpo49c=
     on:
       tags: true
     distributions: sdist bdist_wheel
